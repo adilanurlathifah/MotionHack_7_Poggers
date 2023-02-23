@@ -11,9 +11,9 @@ void main(){
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.light(),
-      home: const HomePageWidget(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePageWidget(),
     );
   }
 }
