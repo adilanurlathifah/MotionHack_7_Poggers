@@ -116,7 +116,7 @@ class _HomePageWidget extends State<HomePageWidget> {
                           ),
                         ),
                           const SizedBox(
-                          height: 7,
+                          height: 0,
                         ),
                           Text(
                           "See All",
@@ -129,12 +129,44 @@ class _HomePageWidget extends State<HomePageWidget> {
                       ]),
                     ),
                   ]),
-              ),
+               ),
               ),
             ),
-          ],
-        ),
-      ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+              child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 100,
+                  child: ListView.builder(
+                    itemCount: 8,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => Container(
+                      height: 80,
+                      width: 70,
+                      margin: const EdgeInsets.all(10),
+                      child: Center(
+                        child: Image.network('https://www.pubgmobile.com/images/event/common/icon.png')
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+                  ),
+                ),
+                      ),
+            ),
+          const SizedBox(
+            height: 280,
+          )
+          ]
+    ))
     );
   }
 }
