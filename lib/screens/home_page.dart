@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack_poggers/shared/theme.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -79,15 +78,16 @@ class _HomePageWidget extends State<HomePageWidget> {
           padding: const EdgeInsets.all(10),
           width: 360,
           child: Row(
-            children: const [
-              Icon(
+            children:  [
+              const Icon(
               Icons.search,
               color: Colors.black,
               ),
                Text(
-                'Search',
+                '\t\tSearch',
                 style: TextStyle(
-                  color : Colors.black
+                  fontWeight: FontWeight.w500,
+                  color : Colors.black.withOpacity(0.6)
                 ),
                ),
             ],
@@ -98,7 +98,10 @@ class _HomePageWidget extends State<HomePageWidget> {
           ),
           Expanded(
             child: Container(
-              color: Colors.white,
+              decoration: const BoxDecoration(
+                
+                color: Colors.white,
+              ),
               child: Center(
                 child: Column(
                   children: [
@@ -158,14 +161,25 @@ class _HomePageWidget extends State<HomePageWidget> {
                   ),
                 ),
               ],
-                  ),
                 ),
-                      ),
+              ),
             ),
-          const SizedBox(
-            height: 280,
-          )
-          ]
+          ),
+          Container(
+            color: Colors.white,
+            height: 215,
+            child: Center(
+              child: 
+              SizedBox(
+                height: 210,
+                width: 350,
+                child: Image.asset('lib/images/valorant_turnament.png'))
+             ),
+          ),
+           const SizedBox(
+            height: 80,
+          ),
+        ]
     ))
     );
   }
