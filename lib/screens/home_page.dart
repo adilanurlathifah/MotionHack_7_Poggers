@@ -18,6 +18,7 @@ class _HomePageWidget extends State<HomePageWidget> {
   @override
   Widget build(BuildContext context) {
   return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: blueColor,
         bottomNavigationBar: BottomNavigationBar(
           items: const [
@@ -194,9 +195,9 @@ class _HomePageWidget extends State<HomePageWidget> {
                   decoration: const BoxDecoration(
                     color: Colors.white
                     ),
-                  height: 115.0,
+                  height: 140.0,
                   child: ListView.separated(
-                  itemCount: 8,
+                  itemCount: 6,
                   separatorBuilder: (BuildContext context, int index) {
                     return const SizedBox(
                   width: 10,
@@ -205,9 +206,72 @@ class _HomePageWidget extends State<HomePageWidget> {
                   itemBuilder: (_, i) => const PlayerAvatar(),
                   scrollDirection: Axis.horizontal,
               ),
-                    ),
-      ]
-    )
-  ));
+            ),
+            Container(
+                    color: Colors.white,
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children:  const[
+                              Text(
+                              'Live Stream',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black,
+                                ),
+                              ),
+                          ],
+                      ),
+                   ),
+                ]),
+              ),
+            Container(
+                 decoration: const BoxDecoration(
+                  color: Colors.white,
+                  ),
+                  height: 260,
+                  child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5,
+                  itemBuilder:(context, index) {
+                  return _liveCard();
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+  Widget _liveCard() {
+    return Card(
+      child: Container(
+        color: Colors.white,
+        width: 260,
+
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Image.network("https://www.konyoha.com/wp-content/uploads/2018/12/cara-live-streaming-pubg-facebook-youtube-android.jpg", fit:BoxFit.cover),
+            ),
+            const Card(
+              child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80')
+              ),
+              title: Text('Push Rank [PUBG]'),
+              subtitle: Text('Shroud'),
+              ),
+          )],
+        ),
+      ),
+    );
   }
 }

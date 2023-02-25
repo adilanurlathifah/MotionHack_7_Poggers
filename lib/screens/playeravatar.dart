@@ -19,19 +19,28 @@ class PlayerAvatar extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Wrap(
-              children: <Widget>[
-                TextButton(
-                  child: const Text('Oura'),
-                  onPressed: () {/* ... */},
-                ),
-                const SizedBox(width: 8),
-                TextButton(
-                  child: const Text('MLBB'),
-                  onPressed: () {/* ... */},
-                ),
-                const SizedBox(width: 10),
-              ],
-            ),
+              children: const <Widget>[
+                ListTile(
+                  leading: Image(image: 
+                  AssetImage(
+                    'lib/images/valorant_turnament.png',
+                    )),
+                  title: Text(
+                    'Oura',
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.black
+                    )  
+                  ),  
+                subtitle: Text(  
+                  'MLBB',  
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.grey
+                  )  
+                ),  
+              ),  
+          ]),
           ],
         ),
       )
