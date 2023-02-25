@@ -468,7 +468,7 @@ class _TournamentPayment extends State<TournamentPayment> {
         children: [
           Column(
             children: [
-              Image(image: const AssetImage('lib/images/success.png'), width: 40, height: 40),
+              const Image(image: AssetImage('lib/images/success.png'), width: 40, height: 40),
               const SizedBox(
                 height: 20,
               ),
