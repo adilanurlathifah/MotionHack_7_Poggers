@@ -101,7 +101,7 @@ class _StreamingPage extends State<StreamingPage> {
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
               const Padding(
                 padding: EdgeInsets.all(8.0),
@@ -112,7 +112,146 @@ class _StreamingPage extends State<StreamingPage> {
                   fontSize: 18
                 ),),
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                Row(
+                    children: [
+                       const CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('lib/images/john.jpg'),
+                           ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                        Text(
+                          'John',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          color: Colors.grey
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Text(
+                          'Hello Guys!!',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontSize: 16
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                    children: [
+                       const CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('lib/images/kelly.jpg'),
+                           ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                        Text(
+                          'Kelly',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: Colors.grey
+                        ),
+                      ),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Text(
+                          'What a nice movement',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontSize: 16
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height:10
+              ),
+              Row(
+                    children: [
+                       const CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('lib/images/adam_melvin.jpg'),
+                           ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                        Text(
+                          'Adam Melvin',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: Colors.grey
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                          'joined',
+                          style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          fontSize: 16
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                        height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(  
+                children: const <Widget>[  
+                  Padding(  
+                    padding: EdgeInsets.all(0),  
+                    child: TextField(  
+                      decoration: InputDecoration(  
+                        border: OutlineInputBorder(),   
+                        hintText: 'Add Comment',  suffixIcon: Icon(Icons.insert_emoticon)
+                      ),  
+                      
+                    ),  
+                  ),  
+                ],  
+              ),
+              )  
           ] ),
-        );
+    )]),
+    );
   }
 }

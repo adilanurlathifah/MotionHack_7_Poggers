@@ -5,10 +5,10 @@ import 'package:motionhack_poggers/screens/tournament_desc.dart';
 import 'package:motionhack_poggers/shared/theme.dart';
 
 class TournamentPayment extends StatefulWidget {
-  final Map? todo;
+  final Map? Payment;
   const TournamentPayment({
     super.key,
-    this.todo,
+    this.Payment,
   });
 
 @override
