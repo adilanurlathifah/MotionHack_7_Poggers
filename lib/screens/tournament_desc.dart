@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:motionhack_poggers/shared/theme.dart';
 
 class TournamentDesc extends StatefulWidget {
-  final Map? todo;
+  final Map? tournament;
   const TournamentDesc({
     super.key,
-    this.todo,
+    this.tournament,
   });
 
 @override

@@ -35,28 +35,28 @@ class _VideoCall  extends State<VideoCall> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   Icon(Icons.arrow_back_ios,
+                   const Icon(Icons.arrow_back_ios,
                    color: Colors.white,
                     size: 25),
-                    SizedBox(
+                    const SizedBox(
                       width: 80,
                       height: 85,
                     ),
                     Column(
-                      children: [
-                        Text('Oura EVOS MLBB',
+                      children: const[
+                         Text('Oura EVOS MLBB',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
                           decoration: TextDecoration.none
+                          ),
                         ),
-                        ),
-                        Text('20:57',
+                         Text('20:57',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
                           decoration: TextDecoration.none
-                        ),
+                          ),
                         ),
                       ],
                     )
