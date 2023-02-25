@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:motionhack_poggers/shared/theme.dart';
@@ -15,6 +14,7 @@ State<TournamentDesc> createState() => _TournamentDesc();
 }
 
 class _TournamentDesc extends State<TournamentDesc> {
+  final String _buttonText = " Register \$5";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,7 +134,57 @@ class _TournamentDesc extends State<TournamentDesc> {
                         color: Colors.black
                       ),
                   ),
-              ],
+                const SizedBox(
+                  height: 12,
+                ),
+                const Text(
+                    'Prize Pool Rp. 4,000,000 + Medal + E-Certificate + Team Profile on the Tourney Info Website Prizes may change according to the number of  participants',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey
+                      ),
+                  ),
+                const SizedBox(
+                  height: 20,
+                ),
+              GestureDetector(
+                onTap: () {
+                },
+                child: Container(
+                 height: 60,
+                 width: 50,
+                 padding: const EdgeInsets.all(10),
+                 decoration: BoxDecoration(
+                   color: blueColor,
+                  borderRadius: BorderRadius.circular(10)
+                 ),
+                 child:
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text('\$10',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      decoration: TextDecoration.lineThrough
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text('Register \$5',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                  ))
+                 ],)
+                ),
+              ),
+            ],
           ),
         );
   }
